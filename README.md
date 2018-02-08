@@ -1,8 +1,8 @@
-#Sitemap
+# Sitemap
 
 This plugin not multiusage. It's only for our cms on laravel
 
-##How to use
+## How to use
 
 **1.**
 
