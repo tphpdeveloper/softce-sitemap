@@ -1,20 +1,18 @@
 <?php
 
-namespace Mage2\Ecommerce\Http\Controllers\Admin;
-
-use Mage2\Ecommerce\Models\Database\Category;
+namespace Softce\Sitemap\Core;
 
 use File;
 
-class SiteMapController extends AdminController
+class Sitemap
 {
 
     private $categories = null;
     private $list_product_category = '';
 
 
-    public function __construct() {
-        $this->categories = Category::all();
+    public function __construct(Category $category) {
+        $this->categories = $category;
     }
 
     public function index(){
@@ -59,7 +57,7 @@ class SiteMapController extends AdminController
     public function sitemapCategoryProducts(){
 
         foreach($this->categories as $category){
-            if($category->id == 4) continue;
+            //if($category->id == 4) continue;
 
             $name_file = 'sitemap-category-'.($category->id).'.xml';
 

@@ -1,7 +1,7 @@
 {
     "name": "softce/sitemap",
     "description": "create sitemap from category products",
-    "type": "composer-plugin",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -10,13 +10,16 @@
         }
     ],
     "require": {
-        "php" : ">=7.0"
+        "php" : ">=7.0",
+        "laravel" : "5.5.*"
+
     },
     "require-dev":{
-        "phpunit/phpunit": "*",
-		"laravel" : ">=5.5.0"
+        "phpunit/phpunit": "*"
     },
     "autoload":{
-        "classmap": ["src"]
+        "psr-4": {
+            "Softce\\Sitemap\\" : "src/"
+        }
     }
 }
