@@ -1,0 +1,22 @@
+{
+    "name": "softce/sitemap",
+    "description": "create sitemap from category products",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Kutsan",
+            "email": "igorkutsan@ukr.net"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0",
+        "laravel" : ">=5.5"
+    },
+    "require-dev":{
+        "phpunit/phpunit": "*"
+    },
+    "autoload":{
+        "classmap": ["src"]
+    }
+}
