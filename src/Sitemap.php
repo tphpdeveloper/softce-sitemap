@@ -1,7 +1,6 @@
 <?php
 
 namespace Softce\Sitemap;
-
 use File;
 
 class Sitemap
@@ -11,7 +10,7 @@ class Sitemap
     private $list_product_category = '';
 
 
-    public function __construct(Category $category) {
+    public function __construct($category) {
         $this->categories = $category;
     }
 
@@ -60,10 +59,7 @@ class Sitemap
             //if($category->id == 4) continue;
 
             $name_file = 'sitemap-category-'.($category->id).'.xml';
-
-
             $category->products()->chunk(100, function($products){
-//                $this->list_product_category[] = $products;
 
                 $this->list_product_category .= view('mage2-ecommerce::admin.sitemap.category_products.body')
                     ->with('products', $products)
@@ -85,13 +81,10 @@ class Sitemap
                 echo 'Ошибка записи в файл '.$name_file;
                 echo '<br />';
             }
-
-//            dump($this->list_product_category);
-//            dd();
-
-
         }
-
     }
+
+
+    
 }
 ?>
