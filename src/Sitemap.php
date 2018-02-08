@@ -14,7 +14,7 @@ class Sitemap
         $this->categories = $category;
     }
 
-    public function index(){
+    public function create(){
         $this->sitemap();
         $this->sitemapCategory();
         $this->sitemapCategoryProducts();
@@ -85,6 +85,6 @@ class Sitemap
     }
 
 
-    
+
 }
 ?>
