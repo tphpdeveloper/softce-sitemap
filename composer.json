@@ -1,6 +1,6 @@
 {
     "name": "softce/sitemap",
-    "description": "create sitemap from category products",
+    "description": "create multiple sitemap from category products",
     "type": "library",
     "license": "MIT",
     "authors": [

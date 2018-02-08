@@ -1,6 +1,6 @@
 <?php
 
-namespace Softce\Sitemap\Core;
+namespace Softce\Sitemap;
 
 use File;
 
