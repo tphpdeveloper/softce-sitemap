@@ -1,12 +1,12 @@
-*Sitemap*
+#Sitemap#
 
 This plugin not multiusage. It's only our cms on laravel
 
 ##How to use##
 
-```php
-
 **1.**
+
+```php
 //In modules/mage2/eccommerce/src/AdminMenu/Provider.php in block **System**
 
 $sitemap = new AdminMenu();
@@ -15,8 +15,11 @@ $sitemap->key('sitemap')
     ->route('admin.sitemap.index')
     ->icon('fa-map');
 $systemMenu->subMenu('sitemap',$sitemap);
+```
 
 **2.**
+
+```php
 //Create controller in modules/mage2/eccommerce/src/Http/Controllers/Admin/SiteMapController.php
 //In controller needed create method index()
 
@@ -34,8 +37,11 @@ class SiteMapController extends AdminController
     }
 
 }
+```
 
 **3.**
+
+```php
 //In modules/mage2/eccommerce/routes/web.php in groupe admin write
  Route::get('/sitemap', ['as' => 'admin.sitemap.index', 'uses' => 'SiteMapController@index']);
 
