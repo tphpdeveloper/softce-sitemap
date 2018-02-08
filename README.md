@@ -1,4 +1,4 @@
-#Sitemap#
+*Sitemap*
 
 This plugin not multiusage. It's only our cms on laravel
 
