@@ -56,7 +56,7 @@ class Sitemap
     public function sitemapCategoryProducts(){
 
         foreach($this->categories as $category){
-            if($category->id == 4) continue;
+            //if($category->id == 4) continue;
 
             $name_file = 'sitemap-category-'.($category->id).'.xml';
             $category->products()->chunk(100, function($products){
