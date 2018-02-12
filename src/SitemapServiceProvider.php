@@ -15,7 +15,7 @@ class SitemapServiceProvider extends ServiceProvider
 
     public function register(){
         $this->app->bind('Softce\Sitemap', function ($app) {
-            return new Sitemap;
+            return new Sitemap; 
         });
     }
 
