@@ -11,7 +11,7 @@
 "autoload": {
     ... ,
 
-    sr-4": {
+    "sr-4": {
         ... ,
 
         "Softce\\Sitemap\\" : "vendor/softce/sitemap/"
