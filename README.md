@@ -24,7 +24,7 @@
 ```php
 //in console write
 
-**composer update**
+composer update
 ```
 
 
@@ -42,8 +42,9 @@
 **4.**
 ```php
 
-//write to group System
-modules\mage2\ecommerce\src\AdminMenu\Provider.php
+//write to file modules\mage2\ecommerce\src\AdminMenu\Provider.php in group System
+
+
 $sitemap = new AdminMenu();
 $sitemap->key('sitemap')
     ->label('Сгенерировать SITEMAP')
