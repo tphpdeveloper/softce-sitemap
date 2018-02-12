@@ -3,9 +3,10 @@
 
 Route::group([
     'namespace' => 'Softce\Sitemap\Http\Controllers',
-    'prefix' => 'admin/sitemap'
+    'prefix' => 'admin/sitemap',
+    'middleware' => ['web']
     ],function(){
 
-    Route::get('/create', ['as' => 'create', 'uses' => 'SitemapController@create']);
+    Route::get('/create', ['as' => 'admin.sitemap.create', 'uses' => 'SitemapController@create']);
 
 });

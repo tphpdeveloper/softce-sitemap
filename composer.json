@@ -16,10 +16,6 @@
     },
     "require-dev":{
         "phpunit/phpunit": "*"
-    },
-    "autoload":{
-        "psr-4": {
-            "Softce\\Sitemap\\" : "vendor/softce/sitemap/src/"
-        }
     }
+
 }

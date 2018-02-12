@@ -9,12 +9,12 @@ class SitemapServiceProvider extends ServiceProvider
 {
 
     public function boot(){
-        require_once(__DIR__.'/Http/routes.php');
-        $this->loadViewsFrom(__DIR__.'/views', 'sitemap');
+        require_once(dirname(__DIR__).'\Http\routes.php');
+        $this->loadViewsFrom(dirname(__DIR__).'\views', 'sitemap');
     }
 
     public function register(){
-        $this->app['sitemap'] = $this->app->share(function(){
+        $this->app->bind('Softce\Sitemap', function ($app) {
             return new Sitemap;
         });
     }
