@@ -26,7 +26,7 @@ class Sitemap
         $name_file = 'sitemap.xml';
         $bytes_written = File::put(
                 public_path('/'.$name_file),
-                view('mage2-ecommerce::admin.sitemap.sitemap', [
+                view('sitemap::sitemap', [
                         'categories' => $this->categories
                 ])->render()
         );
@@ -42,7 +42,7 @@ class Sitemap
         $name_file = 'sitemap-category.xml';
         $bytes_written = File::put(
                 public_path('/sitemaps/'.$name_file),
-                view('mage2-ecommerce::admin.sitemap.sitemap-category')
+                view('sitemap::sitemap-category')
                     ->with('categories', $this->categories)
                     ->render()
         );
@@ -56,19 +56,19 @@ class Sitemap
     public function sitemapCategoryProducts(){
 
         foreach($this->categories as $category){
-            //if($category->id == 4) continue;
+            if($category->id == 4) continue;
 
             $name_file = 'sitemap-category-'.($category->id).'.xml';
             $category->products()->chunk(100, function($products){
 
-                $this->list_product_category .= view('mage2-ecommerce::admin.sitemap.category_products.body')
+                $this->list_product_category .= view('sitemap::category_products.body')
                     ->with('products', $products)
                     ->render()
                     ;
 
             });
 
-            $head = view('mage2-ecommerce::admin.sitemap.category_products.head', [
+            $head = view('sitemap::category_products.head', [
                             'content' => $this->list_product_category
                     ])->render();
             $this->list_product_category = '';
